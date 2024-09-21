@@ -1,0 +1,94 @@
+/* body{
+    background-color: red;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+*{
+    font-family: "Bangers", system-ui;
+    font-weight: normal;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0.75rem;
+    height: 100vh;
+}
+
+.article-container{
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    padding:1rem;
+    min-height: 50%;
+}
+
+h1{
+    padding-bottom: 0.75rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size:1.2rem;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #4D4848;
+}
+
+.list-container,.list-item,.admin-title-bar,.btn-date-container{
+    display: flex;
+}
+
+.list-container{
+    flex-direction: column;
+    gap:0.25rem;
+}
+
+.list-item,.admin-title-bar{
+    justify-content: space-between;
+}
+
+.admin-title-bar a{
+    padding-top: 0.5rem;
+    
+}
+
+.btn-date-container,.btn-date-container a{
+    color: grey;
+}
+
+.btn-date-container{
+    gap:1rem;
+}
+
+.paragraph{
+    margin-top: 0.25rem;
+    text-align: justify;
+    color: #3C3D37;
+}
+
+.article-container form{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+input,textarea,button{
+    padding: 0.2rem;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+
+button{
+    width: 30%;
+}
+
+@media only screen and (min-device-width: 700px){
+    .article-container{
+        width: 50%;
+        margin: 0 auto;
+    }
+}

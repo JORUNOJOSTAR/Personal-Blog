@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %> Article</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="article-container">
+        <h1><%= pageTitle %> article</h1>
+        <form action="/update" method="post">
+            <input type="text" name="title" placeholder="Article Title" value="<%= typeof title=="undefined"?"":title %>"  required>
+            <input type="text" placeholder="Publishing Date" name="publishingDate" value="<%= publishingDate %>" readonly>
+            <textarea  rows="10" placeholder="content" name="content" required><%= typeof content=="undefined"?"":content %></textarea>
+            <input type="hidden" name="articleId" value="<%= typeof articleId=="undefined"?"":articleId %>">
+            <button>Update</button>
+        </form>
+    </div>
+</body>
+</html>

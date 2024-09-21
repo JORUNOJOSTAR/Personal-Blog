@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Admin Home</title>
+</head>
+<body>
+    <div class="article-container">
+        <div class="admin-title-bar">
+            <h1>Personal Blog</h1>
+            <a href="/new">+ Add</a>
+        </div>
+        <div class="list-container">
+                <% articles.forEach(article => { %>
+                    <div class="list-item">
+                        <a href="<%= `/article/${article.fileId}`%>"><%= article.title %></a>
+                        <div class="btn-date-container">
+                            <a href="<%= `/edit/${article.fileId}`%>">Edit</a>
+                            <a href="<%= `/delete/${article.fileId}`%>">Delete</a>
+                        </div>
+                    </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+</html>
